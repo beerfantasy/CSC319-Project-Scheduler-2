@@ -56,8 +56,13 @@ public class Activity {
   
   public void setReleaseTime(double time) {
     // YOUR CODE here
-    if(time < this.activationTime || (time - this.duration) > this.releaseTime){
-        this.releaseTime = time;
+    if (time < 0.0) {
+      return;
+    }
+    if (time < this.activationTime) {
+      this.releaseTime = time;
+    }else{
+      this.releaseTime = this. activationTime;
     }
   }
 
@@ -92,17 +97,22 @@ public class Activity {
   //    class, where the weights on the earliness and tardiness
   //    performance parameters are set to 1.0.
   public double getPerformance() {
-    if(this.releaseTime > this.activationTime ){
-        this.tempActivationTime = 1.0 * (this.releaseTime - this.activationTime);
-    }else if( this.releaseTime <= this.activationTime){
-        this.tempActivationTime = 0;
+    // YOUR CODE here
+    double pe;
+    double pt;
+    double gain = 0.1;
+    if(releaseTime > activationTime)
+    {
+      pe = gain*(releaseTime - activationTime);
+    }else{
+      pe = 0;
     }
-    if(this.terminationTime > this.dueTime){
-        this.tempTerminationTime = 1.0 * (this.terminationTime - this.dueTime);
-    }else if( this.releaseTime <= this.activationTime){
-        this.tempTerminationTime = 0;
+    if(terminationTime > dueTime){
+      pt = gain*(terminationTime - activationTime);
+    }else{
+      pt = 0;
     }
-    return this.tempActivationTime + this.tempTerminationTime;
+    return pe+pt;
   }
 
   // The store() method is used to store an activity's temporal parameters that
@@ -110,6 +120,8 @@ public class Activity {
   // algorithm during a given iteration step.
   public void store() {
     // YOUR CODE here
+    tempActivationTime = activationTime;
+    tempTerminationTime = terminationTime;
   }
 
   //    The restore() method is invoked at the end of the scheduling process
