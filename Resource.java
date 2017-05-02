@@ -7,7 +7,7 @@ public class Resource {
 
        
         public int compare(Activity a1, Activity a2) {
-            return a1.getID()-a2.getID(); //To change body of generated methods, choose Tools | Templates.
+            return a1.activationTime()-a2.activationTime(); //To change body of generated methods, choose Tools | Templates.
         }
     // YOUR CODE here
 
@@ -20,7 +20,7 @@ public class Resource {
 
   private String name;
   private ArrayList activities = new ArrayList();
-  private double gain = 0.0;
+  private double gain = 0.1;
 
   public Resource(String name) {
     this.name = name;
