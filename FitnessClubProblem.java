@@ -24,15 +24,6 @@ public class FitnessClubProblem extends Problem {
         exercises.add(new Activity ("A04", 30.0, 35.0, 40.0, 45.0));
         exercises.add(new Activity ("A05", 35.0, 40.0, 45.0, 50.0));
         exercises.add(new Activity ("A06", 40.0, 45.0, 50.0, 55.0));
-        
-//        task1.addActivity(new Activity ("A00", 8.0, 10.0, 15.0, 25.0));
-//        task1.addActivity(new Activity ("A01", 8.0, 10.0, 15.0, 25.0));
-//        task1.addActivity(new Activity ("A02", 8.0, 10.0, 15.0, 25.0));
-//        task1.addActivity(new Activity ("A03", 25.0, 30.0, 35.0, 40.0));
-//        task1.addActivity(new Activity ("A04", 30.0, 35.0, 40.0, 45.0));
-//        task1.addActivity(new Activity ("A05", 35.0, 40.0, 45.0, 50.0));
-//        task1.addActivity(new Activity ("A06", 40.0, 45.0, 50.0, 55.0));
-//        this.addTask(task1);
 
         Task task1 = new Task();
         task1.addActivity(exercises.get(0));
