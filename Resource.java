@@ -7,7 +7,7 @@ public class Resource {
 
        
         public int compare(Activity a1, Activity a2) {
-            return a1.activationTime()-a2.activationTime(); //To change body of generated methods, choose Tools | Templates.
+            return a.getActivationTime() < b.getActivationTime() ? -1 : a.getActivationTime() == b.getActivationTime() ? a.getID() < b.getID() ? 0 : 1 : 1; //To change body of generated methods, choose Tools | Templates.
         }
     // YOUR CODE here
 
