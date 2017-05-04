@@ -55,23 +55,23 @@ public class SchedulerJUnitTest {
      
    @Test
    public void testResourceOne() {
-      assertEquals(8.0, p.getActivity(0, 0).getActivationTime(), 0.9);
-      assertEquals(13.0, p.getActivity(0, 1).getActivationTime(), 0.9);
-      assertEquals(18.0, p.getActivity(0, 2).getActivationTime(), 0.9);
-      assertEquals(23.0, p.getActivity(0, 3).getActivationTime(), 0.9);
-      assertEquals(28.0, p.getActivity(0, 4).getActivationTime(), 0.9);
-      assertEquals(33.0, p.getActivity(0, 5).getActivationTime(), 0.9);
-      assertEquals(38.0, p.getActivity(0, 6).getActivationTime(), 0.9);
+      assertEquals(8.0, p.getActivity(0, 0).getActivation(), 0.9);
+      assertEquals(13.0, p.getActivity(0, 1).getActivation(), 0.9);
+      assertEquals(18.0, p.getActivity(0, 2).getActivation(), 0.9);
+      assertEquals(23.0, p.getActivity(0, 3).getActivation(), 0.9);
+      assertEquals(28.0, p.getActivity(0, 4).getActivation(), 0.9);
+      assertEquals(33.0, p.getActivity(0, 5).getActivation(), 0.9);
+      assertEquals(38.0, p.getActivity(0, 6).getActivation(), 0.9);
    }
     
    @Test
     public void testResourceTwo() {
-      assertEquals(5.0, p.getActivity(1, 0).getActivationTime(), 0.9);
-      assertEquals(14.0, p.getActivity(1, 1).getActivationTime(), 0.9);
-      assertEquals(28.0, p.getActivity(1, 2).getActivationTime(), 0.9);
-      assertEquals(43.0, p.getActivity(1, 3).getActivationTime(), 0.9);
-      assertEquals(38.0, p.getActivity(1, 4).getActivationTime(), 0.9);
-      assertEquals(33.0, p.getActivity(1, 5).getActivationTime(), 0.9);
-      assertEquals(23.0, p.getActivity(1, 6).getActivationTime(), 0.9);
+      assertEquals(5.0, p.getActivity(1, 0).getActivation(), 0.9);
+      assertEquals(14.0, p.getActivity(1, 1).getActivation(), 0.9);
+      assertEquals(28.0, p.getActivity(1, 2).getActivation(), 0.9);
+      assertEquals(43.0, p.getActivity(1, 3).getActivation(), 0.9);
+      assertEquals(38.0, p.getActivity(1, 4).getActivation(), 0.9);
+      assertEquals(33.0, p.getActivity(1, 5).getActivation(), 0.9);
+      assertEquals(23.0, p.getActivity(1, 6).getActivation(), 0.9);
    }
 }
