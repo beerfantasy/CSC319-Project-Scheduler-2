@@ -98,14 +98,6 @@ public class Activity {
       }
    }
 
-   public double getActivationTime() {
-      return activationTime;
-   }
-
-   public double getTerminationTime() {
-      return terminationTime;
-   }
-
    public void reset() {
       activationTime = 0.0;
       terminationTime = activationTime + duration;
